@@ -5,7 +5,7 @@
     let isDarkModeOn= true;
 </script>
 {#if isDarkModeOn}
-<main class="bg-gray-800 h-screen">
+<main class="bg-gray-900 h-screen">
 <div class="flex flex-row flex-wrap justify-center">
     <Button color="info" button_name="Information"/>
     <Button color="danger" button_name="Danger"/>
@@ -19,7 +19,17 @@
     <TextArea color="primary"/>
     <TextArea color="warning"/>
     <TextArea color="pop"/>
+
 </div>
+<div class="flex flex-row flex-wrap justify-around">
+    <Toggle color="info"/>
+    <Toggle color="danger"/>
+    <Toggle color="primary"/>
+    <Toggle color="warning"/>
+    <Toggle color="pop"/>
+    <Toggle/>
+</div>
+
 </main>
 {/if}
 
