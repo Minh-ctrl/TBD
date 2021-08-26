@@ -3,6 +3,7 @@
     import Button from '$lib/Button.svelte';
     import TextArea from '$lib/TextArea.svelte';
     import DarkMode from '$lib/DarkMode.svelte';
+    import RadioButton from '$lib/RadioButton.svelte';
 </script>
 <main class="h-screen bg-opacity-1">
     <div class="flex flex-row flex-wrap justify-center">
@@ -26,13 +27,20 @@
         <Toggle color="warning"/>
         <Toggle color="pop"/>
     </div>
+    <div class="flex flex-row flex-wrap justify-around">
+        <RadioButton type="radio" color="info"/>
+        <RadioButton type="radio" color="danger"/>
+        <RadioButton type="radio" color="primary"/>
+        <RadioButton type="radio" color="warning"/>
+        <RadioButton type="radio" color="pop"/>
+    </div>
     <DarkMode/>
 
 </main>
 <style>
 	:root{
 		--bg-color: rgba(243, 244, 246);
-		--text-color: rgba(17, 24, 39);
+		--text-color: rgba(31, 41, 55);
 	}
 	:global(body) {
 		background: var(--bg-color);
@@ -40,7 +48,7 @@
 	}
 	
 	:global(body.dark) {
-		--bg-color: rgba(17, 24, 39);
+		--bg-color: rgba(31, 41, 55);
 		--text-color: rgba(243, 244, 246);
 	}
 </style>
