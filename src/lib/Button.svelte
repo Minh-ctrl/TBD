@@ -12,7 +12,8 @@
     class:hover:bg-green-400={color=="primary"} class:border-green-300={color=="primary"} class:text-green-400={color=="primary"}
     class:hover:bg-yellow-400={color=="warning"} class:border-yellow-300={color=="warning"} class:text-yellow-400={color=="warning"}
     class:hover:bg-purple-800={color=="pop"} class:border-purple-900={color=="pop"} class:text-purple-500={color=="pop"}
-    href="#">
+    href="#"
+    >
         {button_name}
     </a>
 {/if}

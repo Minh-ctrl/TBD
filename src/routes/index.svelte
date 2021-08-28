@@ -4,6 +4,10 @@
     import TextArea from '$lib/TextArea.svelte';
     import DarkMode from '$lib/DarkMode.svelte';
     import RadioButton from '$lib/RadioButton.svelte';
+    function myCustomFunction(e){
+        let isSwitched = e.detail;
+        console.log(isSwitched) // <--- What gets printed here you think ?
+        }
 </script>
 <main class="h-screen bg-opacity-1">
     <div class="flex flex-row flex-wrap justify-center">
@@ -21,8 +25,8 @@
         <TextArea color="pop"/>
     </div>
     <div class="flex flex-row flex-wrap justify-around">
-        <Toggle color="info"/>
-        <Toggle color="danger"/>
+        <Toggle checked isSwitchOn={true} on:click={myCustomFunction} color="info"/>
+        <Toggle checked color="danger"/>
         <Toggle color="primary"/>
         <Toggle color="warning"/>
         <Toggle color="pop"/>

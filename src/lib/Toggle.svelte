@@ -1,9 +1,22 @@
 <script>
+	import {createEventDispatcher} from 'svelte';
+    import { onMount } from 'svelte';
     export let color= true;
+    export let isSwitchOn= false;
+    export let checked;
+    let input;
+    const dispatch = createEventDispatcher()
+    onMount(()=>{
+        if (checked){
+            input.checked=true;
+        }
+    })
 </script>
 {#if color}
     <label class="switch relative inline-block w-16 h-9">
-        <input type="checkbox" class="opacity-0 w-0 h-0">
+        <input bind:this={input}
+        on:click={()=>{(isSwitchOn= !isSwitchOn); dispatch('Toggle', isSwitchOn)}}
+        type="checkbox" class="opacity-0 w-0 h-0">
         <span 
         class="slider absolute cursor-pointer rounded-3xl inset-0 px-8 py-2
         before:bg-gray-100 before:rounded-full dark:before:bg-gray-800
@@ -14,11 +27,12 @@
         class:bg-indigo-800={color=="pop"}
         class:bg-blue-400={color=="info"}
         class:bg-red-400={color=="danger"}
+       
         ></span>
     </label>
 {/if}
 <style>
-input:checked + .slider:before {
-  transform: translateX(2.05rem);
+ input:checked + .slider:before {
+  transform: translateX(2rem);
 }
 </style>
