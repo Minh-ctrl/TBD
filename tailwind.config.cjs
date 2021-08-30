@@ -4,8 +4,15 @@ const config = {
 		"./src/**/*.{html,js,svelte,ts}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+		},
 	},
+	variants: {
+		extend: {
+		  backgroundColor: ['checked'],
+		  borderColor: ['checked'],
+		}
+	  },
 	plugins: [],
 	darkMode: 'class'
 };

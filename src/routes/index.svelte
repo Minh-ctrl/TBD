@@ -28,17 +28,20 @@
         <Toggle checked isSwitchOn={true} on:click={myCustomFunction} color="info"/>
         <Toggle checked color="danger"/>
         <Toggle color="primary"/>
-        <Toggle color="warning"/>
+        <Toggle checked color="warning"/>
         <Toggle color="pop"/>
     </div>
-    <div class="flex flex-row flex-wrap justify-around">
-        <RadioButton type="radio" color="info"/>
-        <RadioButton type="radio" color="danger"/>
-        <RadioButton type="radio" color="primary"/>
-        <RadioButton type="radio" color="warning"/>
-        <RadioButton type="radio" color="pop"/>
+    <div class="flex flex-row flex-wrap justify-around items-center">
+        <RadioButton name="group1" input="group1" value=1 content="10" color="info"/>
+        <RadioButton name="group1" input="group1" value=2 content="20" color="danger"/>
+        <RadioButton name="group1" input="group1" value=3 content="30" color="primary"/>
+        <RadioButton name="group1" input="group1" value=4 content="40" color="warning"/>
+        <RadioButton name="group1" input="group1" value=5 content="50" color="pop"/>
     </div>
-    <DarkMode/>
+    
+    
+
+        <DarkMode/>
 
 </main>
 <style>
