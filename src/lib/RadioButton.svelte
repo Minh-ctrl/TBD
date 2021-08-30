@@ -19,6 +19,5 @@
         <label for="input"class="pl-4 cursor-pointer text-xl">
             {content}
         </label>
-        <p>so you picked {input}</p>
    </div>
 {/if}

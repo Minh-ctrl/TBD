@@ -1,9 +1,9 @@
 <script>
-    export let color;
+    export let color="info";
     export let button_name;
 </script>
 {#if color}
-    <a class=" border  
+    <a on:click class=" border  
     uppercase text-xl pt-2.5 pb-2.5 pl-5 pr-5 ml-4 mr-4 mb-2 mt-2
     duration-200
     hover:shadow-md hover:text-white" 

@@ -4,6 +4,7 @@
     import TextArea from '$lib/TextArea.svelte';
     import DarkMode from '$lib/DarkMode.svelte';
     import RadioButton from '$lib/RadioButton.svelte';
+    import ProgressBar from '$lib/ProgressBar.svelte';
     function myCustomFunction(e){
         let isSwitched = e.detail;
         console.log(isSwitched) // <--- What gets printed here you think ?
@@ -11,11 +12,12 @@
 </script>
 <main class="h-screen bg-opacity-1">
     <div class="flex flex-row flex-wrap justify-center">
-        <Button color="info" button_name="Information"/>
+        <Button on:click={()=>{console.log("yattame")}} color="info" button_name="Information"/>
         <Button color="danger" button_name="Danger"/>
         <Button color="primary" button_name="Primary"/>
         <Button color="warning" button_name="Warning"/>
         <Button color="pop" button_name="Poppy"/>
+        <DarkMode/>
     </div>
     <div class="flex flex-row flex-wrap justify-center">
         <TextArea color="info"/>
@@ -38,10 +40,14 @@
         <RadioButton name="group1" input="group1" value=4 content="40" color="warning"/>
         <RadioButton name="group1" input="group1" value=5 content="50" color="pop"/>
     </div>
-    
-    
+    <div class="flex flex-row flex-nowrap justify-evenly items-center">
+    <ProgressBar color="info" progress="10"/>
+    <ProgressBar color="danger"progress="25"/>
+    <ProgressBar color="primary" progress="50"/>
+    <ProgressBar color="warning" progress="75"/>
+    <ProgressBar color="pop" progress="100"/>
+    </div>
 
-        <DarkMode/>
 
 </main>
 <style>
